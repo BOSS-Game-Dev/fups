@@ -4,7 +4,7 @@ const SPEED : float = 5.0
 const JUMP_VELOCITY : float = 4.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity :float = ProjectSettings.get_setting("physics/3d/default_gravity")
+var gravity : float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 # Get default physics time step for interpolation
 var phys_time_step : float = ProjectSettings.get_setting("physics/common/physics_ticks_per_second")
