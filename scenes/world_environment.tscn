@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://vs4ctaumu0hk"]
+
+[ext_resource type="Texture2D" uid="uid://bbu38kbwiyb2v" path="res://textures/skies/sunflowers_puresky_4k.exr" id="1_3n5qy"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ygp4o"]
+panorama = ExtResource("1_3n5qy")
+
+[sub_resource type="Sky" id="Sky_cnek6"]
+sky_material = SubResource("PanoramaSkyMaterial_ygp4o")
+radiance_size = 1
+
+[sub_resource type="Environment" id="Environment_eu74x"]
+background_mode = 2
+sky = SubResource("Sky_cnek6")
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource("Environment_eu74x")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 8, 0)
+light_energy = 1.412
